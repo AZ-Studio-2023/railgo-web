@@ -13,12 +13,12 @@ config:
       actions:
         -
           theme: brand
-          text: 博客
-          link: /blog/
+          text: 快速开始
+          link: /welcome/
         -
           theme: alt
           text: Github →
-          link: https://github.com/pengzhanbo/vuepress-theme-plume
+          link: https://github.com/AZ-Studio-2023/railgo
   -
     type: features
     features:

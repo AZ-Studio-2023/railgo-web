@@ -21,17 +21,17 @@ export default defineUserConfig({
       title: 'RailGo',
       lang: 'zh-CN',
       description: '一个多功能铁路信息查询工具',
-    },
-    '/en/': {
-      title: 'RailGo',
-      lang: 'en-US',
-      description: '一个多功能铁路信息查询工具',
-    },
+    }
+    // '/en/': {
+    //   title: 'RailGo',
+    //   lang: 'en-US',
+    //   description: '一个多功能铁路信息查询工具',
+    // },
   },
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/logo.png' }],
   ],
 
   bundler: viteBundler(),
@@ -56,7 +56,7 @@ export default defineUserConfig({
      * 博客
      * @see https://theme-plume.vuejs.press/config/basic/#blog
      */
-    // blog: false, // 禁用博客
+    blog: false, // 禁用博客
     // blog: {
     //   postList: true, // 是否启用文章列表页
     //   tags: true, // 是否启用标签页

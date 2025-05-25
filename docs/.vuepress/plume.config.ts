@@ -12,18 +12,18 @@
 
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import { enNavbar, zhNavbar } from './navbar'
-import { enNotes, zhNotes } from './notes'
+import { zhNotes } from './notes'
 
 /**
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  logo: '/image/logo.png',
 
   appearance: true,  // 配置 深色模式
 
   social: [
-    { icon: 'github', link: '/' },
+    { icon: 'github', link: 'https://github.com/AZ-Studio-2023/RailGo/' },
   ],
   // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
@@ -58,7 +58,7 @@ export default defineThemeConfig({
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/image/logo.png',
         name: 'RailGo',
         description: '一个多功能铁路信息查询工具',
         // circle: true,
@@ -80,32 +80,32 @@ export default defineThemeConfig({
        //   content: '',
        // },
     },
-    '/en/': {
-      /**
-       * @see https://theme-plume.vuejs.press/config/basic/#profile
-       */
-      profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'RailGo',
-        description: '一个多功能铁路信息查询工具',
-        // circle: true,
-        // location: '',
-        // organization: '',
-      },
+    // '/en/': {
+    //   /**
+    //    * @see https://theme-plume.vuejs.press/config/basic/#profile
+    //    */
+    //   profile: {
+    //     avatar: '/image/logo.png',
+    //     name: 'RailGo',
+    //     description: '一个多功能铁路信息查询工具',
+    //     // circle: true,
+    //     // location: '',
+    //     // organization: '',
+    //   },
 
-      navbar: enNavbar,
-      notes: enNotes,
+    //   navbar: enNavbar,
+    //   notes: enNotes,
 
-      /**
-       * 公告板
-       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
-       */
-       // bulletin: {
-       //   layout: 'top-right',
-       //   contentType: 'markdown',
-       //   title: '',
-       //   content: '',
-       // },
-    },
+    //   /**
+    //    * 公告板
+    //    * @see https://theme-plume.vuejs.press/guide/features/bulletin/
+    //    */
+    //    // bulletin: {
+    //    //   layout: 'top-right',
+    //    //   contentType: 'markdown',
+    //    //   title: '',
+    //    //   content: '',
+    //    // },
+    // },
   },
 })
