@@ -1,0 +1,5 @@
+:root {
+    --vp-bg-home-hero-name: linear-gradient(315deg, #114598 15%, var(--vp-c-brand-2) 65%, var(--vp-c-brand-2) 100%);
+    --vp-c-home-hero-tagline: var(--vp-c-text-2);
+    --vp-c-home-hero-text: var(--vp-c-text-3);
+  }
