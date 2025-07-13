@@ -8,7 +8,7 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export const zhNavbar = defineNavbarConfig([
   { text: '首页', link: '/' },
-  { text: '文档', link: '/welcome/' },
+  { text: '文档', link: '/welcome' },
 ])
 
 export const enNavbar = defineNavbarConfig([
