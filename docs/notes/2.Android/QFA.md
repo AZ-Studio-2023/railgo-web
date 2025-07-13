@@ -1,7 +1,7 @@
 ---
 title: 常见问题
 createTime: 2025/05/25 20:26:59
-permalink: /notes/2.Android/QFA/
+permalink: /android/QFA.html
 ---
 
 1. 前置摄像的UI适配
