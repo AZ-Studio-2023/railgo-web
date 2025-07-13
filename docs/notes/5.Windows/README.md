@@ -6,6 +6,7 @@ permalink: /windows.html
 
 <script setup>
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
+const msStoreImgSrc = `https://get.microsoft.com/images/zh-cn ${document.documentElement.getAttribute('data-theme') || 'dark'}.svg`
 </script>
 
 ## 下载
@@ -16,7 +17,7 @@ import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 
 ### Microsoft Store
 
-[![MicrosoftStore](https://get.microsoft.com/images/zh-cn%20dark.svg)](https://apps.microsoft.com/detail/9ntrz0dmckgz?mode=mini)
+[<img :src="msStoreImgSrc" width="200"/>](https://apps.microsoft.com/detail/9ntrz0dmckgz?mode=mini)
 
 ## 开源
 
