@@ -2,12 +2,12 @@ name: Build and Deploy VuePress Docs
 
 on:
   push:
-    branches: [ main ]  # 可以根据需要修改为你的主分支名称
+    branches: [ main ]
     paths:
       - 'docs/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
-  workflow_dispatch:    # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取所有历史记录，以便能够推送到其他分支
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,7 +26,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
 
       - name: Install dependencies
         run: pnpm install
@@ -39,7 +42,6 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           
-          # 切换到build分支或创建新分支
           if git show-ref --quiet refs/heads/build; then
             git checkout build
           else
@@ -47,12 +49,8 @@ jobs:
             git rm -rf .
           fi
           
-          # 复制构建文件
           cp -r docs/.vuepress/dist/. .
           
-          # 添加并提交更改
           git add -A
           git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          
-          # 强制推送
           git push origin build --force
