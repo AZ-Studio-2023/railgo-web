@@ -1,0 +1,57 @@
+name: Build and Deploy VuePress Docs
+
+on:
+  push:
+    branches: [ main ]  # 可以根据需要修改为你的主分支名称
+    paths:
+      - 'docs/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取所有历史记录，以便能够推送到其他分支
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build VuePress
+        run: pnpm docs:build
+
+      - name: Deploy to build branch
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # 切换到build分支或创建新分支
+          if git show-ref --quiet refs/heads/build; then
+            git checkout build
+          else
+            git checkout --orphan build
+            git rm -rf .
+          fi
+          
+          # 复制构建文件
+          cp -r docs/.vuepress/dist/. .
+          
+          # 添加并提交更改
+          git add -A
+          git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
+          
+          # 强制推送
+          git push origin build --force
