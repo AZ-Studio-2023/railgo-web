@@ -31,7 +31,7 @@ export default defineUserConfig({
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: '/image/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'https://img.cdn.zenglingkun.cn/i/2025/08/19/uonfcl.png' }],
   ],
 
   bundler: viteBundler(),

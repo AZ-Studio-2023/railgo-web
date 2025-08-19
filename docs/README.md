@@ -42,7 +42,7 @@ config:
     type: image-text
     title: 功能
     description: 丰富功能，尽在RailGo
-    image: /image/logo.png
+    image: https://img.cdn.zenglingkun.cn/i/2025/08/19/uonfcl.png
     list:
       -
         title: 动车组担当查询

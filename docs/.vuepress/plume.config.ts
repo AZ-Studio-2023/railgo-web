@@ -18,7 +18,7 @@ import { zhNotes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: '/image/logo.png',
+  logo: 'https://img.cdn.zenglingkun.cn/i/2025/08/19/uonfcl.png',
 
   appearance: true,  // 配置 深色模式
 
@@ -58,7 +58,7 @@ export default defineThemeConfig({
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
       profile: {
-        avatar: '/image/logo.png',
+        avatar: 'https://img.cdn.zenglingkun.cn/i/2025/08/19/uonfcl.png',
         name: 'RailGo',
         description: '一个多功能铁路信息查询工具',
         // circle: true,
