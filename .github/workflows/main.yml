@@ -47,10 +47,39 @@ jobs:
       - name: Build VuePress site
         run: pnpm docs:build
 
-      # 部署
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: docs/.vuepress/dist
+      # --- 修改部分开始 ---
+
+      # 提交构建产物到 gh-pages 分支
+      - name: Commit to gh-pages branch (No GitHub Pages Deployment)
+        run: |
+          # 配置 git
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          
+          # 检查 gh-pages 分支是否存在，如果不存在则创建
+          git checkout --orphan gh-pages
+          
+          # 清理工作区，只保留构建产物
+          git rm -rf .
+          
+          # 移动构建产物到工作区根目录 (如果你的构建目录是 docs/.vuepress/dist)
+          cp -r docs/.vuepress/dist/. .
+          
+          # 添加所有文件
+          git add .
+          
+          # 提交并推送到 gh-pages
+          git commit -m "Deploy docs from ${{ github.sha }}"
+          git push -f origin gh-pages
+
+      # 触发远程部署（GET secrets.SUBMIT URL）
+      - name: Trigger Remote Deploy
+        run: |
+          # 向 secrets.SUBMIT 提供的 URL 发送 GET 请求
+          # 使用 -s (silent) 和 -L (follow redirects)
+          curl -sL "${{ secrets.SUBMIT }}"
+        env:
+          # 确保 secrets.SUBMIT 在环境中可用
+          SUBMIT: ${{ secrets.SUBMIT }}
+
+      # --- 修改部分结束 ---
