@@ -77,7 +77,7 @@ jobs:
         run: |
           # 向 secrets.SUBMIT 提供的 URL 发送 GET 请求
           # 使用 -s (silent) 和 -L (follow redirects)
-          curl -sL "${{ secrets.SUBMIT }}"
+          curl -sL --max-time 60 "${{ secrets.SUBMIT }}"
         env:
           # 确保 secrets.SUBMIT 在环境中可用
           SUBMIT: ${{ secrets.SUBMIT }}
