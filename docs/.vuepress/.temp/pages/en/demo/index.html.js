@@ -1,0 +1,3 @@
+import comp from "/home/runner/work/railgo-web/railgo-web/docs/.vuepress/.temp/pages/en/demo/index.html.vue"
+const data = JSON.parse("{\"path\":\"/en/demo/\",\"title\":\"Demo\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Demo\",\"createTime\":\"2025/05/25 18:27:19\",\"permalink\":\"/en/demo/\"},\"readingTime\":{\"minutes\":0.04,\"words\":13},\"git\":{\"createdTime\":1748174138000,\"updatedTime\":1748174138000,\"contributors\":[{\"name\":\"zlk-sys\",\"username\":\"zlk-sys\",\"email\":\"18079031125@163.com\",\"commits\":1,\"avatar\":\"https://avatars.githubusercontent.com/zlk-sys?v=4\",\"url\":\"https://github.com/zlk-sys\"}]},\"filePathRelative\":\"en/notes/demo/README.md\",\"headers\":[]}")
+export { comp, data }

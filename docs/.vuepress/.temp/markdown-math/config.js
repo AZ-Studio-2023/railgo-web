@@ -1,0 +1,2 @@
+import "/home/runner/work/railgo-web/railgo-web/node_modules/.pnpm/katex@0.16.22/node_modules/katex/dist/katex.min.css";
+import "/home/runner/work/railgo-web/railgo-web/node_modules/.pnpm/@vuepress+plugin-markdown-math@2.0.0-rc.105_katex@0.16.22_markdown-it@14.1.0_typescript_431c914e8b7f9188d5fa2d5b7d754db3/node_modules/@vuepress/plugin-markdown-math/lib/client/styles/katex.css";

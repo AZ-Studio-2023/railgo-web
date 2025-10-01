@@ -1,0 +1,3 @@
+import comp from "/home/runner/work/railgo-web/railgo-web/docs/.vuepress/.temp/pages/use/oobe.html.vue"
+const data = JSON.parse("{\"path\":\"/use/oobe.html\",\"title\":\"开箱即用体验\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"开箱即用体验\",\"createTime\":\"2025/08/19 18:24:50\",\"permalink\":\"/use/oobe.html\"},\"readingTime\":{\"minutes\":1.53,\"words\":458},\"git\":{\"createdTime\":1755601003000,\"updatedTime\":1755601003000,\"contributors\":[{\"name\":\"zlk-sys\",\"username\":\"zlk-sys\",\"email\":\"18079031125@163.com\",\"commits\":1,\"avatar\":\"https://avatars.githubusercontent.com/zlk-sys?v=4\",\"url\":\"https://github.com/zlk-sys\"}]},\"filePathRelative\":\"notes/2.使用/移动端/OOBE.md\",\"headers\":[]}")
+export { comp, data }
