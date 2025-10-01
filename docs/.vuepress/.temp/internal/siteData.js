@@ -1,1 +1,0 @@
-export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"zh-CN\",\"title\":\"\",\"description\":\"\",\"head\":[[\"link\",{\"rel\":\"icon\",\"type\":\"image/png\",\"href\":\"https://img.cdn.zenglingkun.cn/i/2025/08/19/uonfcl.png\"}]],\"locales\":{\"/\":{\"title\":\"RailGo\",\"lang\":\"zh-CN\",\"description\":\"一个多功能铁路信息查询工具\"}}}")
