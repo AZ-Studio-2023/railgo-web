@@ -14,8 +14,8 @@ permalink: /android/join.html
 
 
 ## 交流群
-交流测群：==[652032716](https://qm.qq.com/q/M3x6DxYHu2)==
+交流群：==[652032716](https://qm.qq.com/q/M3x6DxYHu2)==
 
 ## 反馈
 
-在公测群，根据群公告内容，进行反馈。
+在交流群，根据群公告内容，进行反馈。

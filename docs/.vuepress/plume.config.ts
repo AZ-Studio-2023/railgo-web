@@ -41,7 +41,7 @@ export default defineThemeConfig({
   copyright: 'CC-BY-4.0',
   /* 站点页脚 */
   footer: {
-    message: 'AZ Studio旗下产品',
+    message: 'AZ Studio',
     copyright: '',
   },
 
