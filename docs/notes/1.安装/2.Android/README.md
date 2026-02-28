@@ -9,4 +9,4 @@ permalink: /android.html
 <script setup>
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 </script>
-<RepoCard repo="AZ-Studio-2023/RailGo-UniApp" />
+<RepoCard repo="RailGoApps/RailGo" />

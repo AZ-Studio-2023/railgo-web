@@ -23,4 +23,4 @@ const msStoreImgSrc = `https://get.microsoft.com/images/zh-cn ${document.documen
 
 Windows版本使用WinUI3开发，目前已经在Github开源，欢迎Star~
 
-<RepoCard repo="AZ-Studio-2023/RailGo" />
+<RepoCard repo="RailGoApps/RailGo-WinUI" />
