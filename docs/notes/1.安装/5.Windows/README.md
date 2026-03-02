@@ -13,7 +13,7 @@ const msStoreImgSrc = `https://get.microsoft.com/images/zh-cn ${document.documen
 
 ### Github 发行版
 
-[传送门](https://github.com/AZ-Studio-2023/RailGo/releases)
+[传送门](https://github.com/RailGoApps/RailGo-WinUI/releases)
 
 ### Microsoft Store
 

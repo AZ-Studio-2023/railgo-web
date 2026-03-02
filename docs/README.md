@@ -18,7 +18,7 @@ config:
         -
           theme: alt
           text: Github →
-          link: https://github.com/AZ-Studio-2023/railgo
+          link: https://github.com/RailGoApps/RailGo
   -
     type: features
     features:
@@ -54,7 +54,7 @@ config:
         title: 车次查询
         description: 查询车次及其有关信息。移动端支持下载离线数据。
       -
-        title: 测速（仅移动端，暂未上线）
+        title: 测速
         description: 使用设备GPS定位获取实时时速。
       -
         title: 雷达（仅移动端，暂未上线）
