@@ -5,8 +5,15 @@ permalink: /windows.html
 ---
 
 <script setup>
+import { onMounted, ref } from 'vue'
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
-const msStoreImgSrc = `https://get.microsoft.com/images/zh-cn ${document.documentElement.getAttribute('data-theme') || 'dark'}.svg`
+
+const msStoreImgSrc = ref('')
+
+onMounted(() => {
+  const theme = document.documentElement.getAttribute('data-theme') || 'dark'
+  msStoreImgSrc.value = `https://get.microsoft.com/images/zh-cn ${theme}.svg`
+})
 </script>
 
 ## 下载
