@@ -13,7 +13,19 @@ permalink: /android/join.html
 > 点击下方按钮，获取到链接后会自动弹出下载
 
 <ClientOnly>
-  <DownloadButton />
+  <div>
+    <button 
+      class="download-btn" 
+      @click="handleDownload"
+      :disabled="isLoading"
+    >
+      <span v-if="!isLoading">立即下载</span>
+      <template v-else>
+        <span class="spinner"></span>
+        <span style="margin-left: 8px;">获取下载链接中...</span>
+      </template>
+    </button>
+  </div>
 </ClientOnly>
 
 ### 网盘（备用）
@@ -21,56 +33,36 @@ permalink: /android/join.html
 > [!important]
 > 请认准==辰墨==的文件分享，避免下载到了恶意文件
 
-<script setup>
-import { ref } from 'vue'
-
-// 定义下载按钮组件
-const DownloadButton = {
-  setup() {
-    const isLoading = ref(false)
-    const btnText = ref('立即下载')
-    const apiUrl = 'https://api.state.railgo.zenglingkun.cn/api/v1/url/pack/android'
-
-    const handleDownload = async () => {
-      if (isLoading.value) return
-      isLoading.value = true
-      btnText.value = '获取下载链接中...'
+<script>
+export default {
+  data() {
+    return {
+      isLoading: false,
+      apiUrl: 'https://api.state.railgo.zenglingkun.cn/api/v1/url/pack/android'
+    }
+  },
+  methods: {
+    async handleDownload() {
+      if (this.isLoading) return
+      this.isLoading = true
 
       try {
-        const response = await fetch(apiUrl)
+        const response = await fetch(this.apiUrl)
         const data = await response.json()
         
         if (data.code === 200 && data.url) {
+          // 跳转到下载链接
           window.location.href = data.url
         } else {
           alert('获取下载链接失败，请稍后重试或联系管理员。')
-          isLoading.value = false
-          btnText.value = '立即下载'
+          this.isLoading = false
         }
       } catch (error) {
         console.error('请求下载接口出错:', error)
         alert('网络请求失败，请检查网络连接后重试。')
-        isLoading.value = false
-        btnText.value = '立即下载'
+        this.isLoading = false
       }
     }
-
-    return () => (
-      <button 
-        class="download-btn" 
-        onClick={handleDownload}
-        disabled={isLoading.value}
-      >
-        {isLoading.value ? (
-          <>
-            <span class="spinner"></span>
-            <span style="margin-left: 8px;">{btnText.value}</span>
-          </>
-        ) : (
-          <span>{btnText.value}</span>
-        )}
-      </button>
-    )
   }
 }
 </script>
@@ -103,6 +95,7 @@ const DownloadButton = {
   opacity: 0.8;
 }
 
+/* 加载动画 - 旋转圆环 */
 .spinner {
   display: inline-block;
   width: 20px;
