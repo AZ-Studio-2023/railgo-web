@@ -3,29 +3,24 @@ title: 下载
 createTime: 2025/05/25 20:16:46
 permalink: /android/join.html
 ---
-
 安卓版本已发布正式版本，请按照下方说明下载。
-
 ## 安装
-
 ### CDN直链下载
 
 > 点击下方按钮，获取到链接后会自动弹出下载
 
 <ClientOnly>
-  <div>
-    <button 
-      class="download-btn" 
-      @click="handleDownload"
-      :disabled="isLoading"
-    >
-      <span v-if="!isLoading">立即下载</span>
-      <template v-else>
-        <span class="spinner"></span>
-        <span style="margin-left: 8px;">获取下载链接中...</span>
-      </template>
-    </button>
-  </div>
+  <button 
+    class="download-btn" 
+    @click="handleDownload"
+    :disabled="isLoading"
+  >
+    <span v-if="!isLoading">立即下载</span>
+    <template v-else>
+      <span class="spinner"></span>
+      <span style="margin-left: 8px;">获取下载链接中...</span>
+    </template>
+  </button>
 </ClientOnly>
 
 ### 网盘（备用）
@@ -51,7 +46,9 @@ export default {
         const data = await response.json()
         
         if (data.code === 200 && data.url) {
-          // 跳转到下载链接
+          // 先重置按钮状态，再进行跳转
+          this.isLoading = false
+          // 使用 window.location.href 跳转
           window.location.href = data.url
         } else {
           alert('获取下载链接失败，请稍后重试或联系管理员。')
@@ -95,7 +92,6 @@ export default {
   opacity: 0.8;
 }
 
-/* 加载动画 - 旋转圆环 */
 .spinner {
   display: inline-block;
   width: 20px;
