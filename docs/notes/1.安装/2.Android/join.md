@@ -83,7 +83,7 @@ export default {
 }
 
 .download-btn:hover:not(:disabled) {
-  background-color: #2d8a5e;
+  background-color: #114598;
 }
 
 .download-btn:disabled {
