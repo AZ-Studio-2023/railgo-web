@@ -5,3 +5,5 @@ permalink: /Agreements/api.html
 ---
 
 > 本软件系为相关人士提供信息收集与整理的软件，提供的所有数据均为计算机采集获得，**仅供学习参考**，不保证实时性、准确性或完整性。用户应自行核对信息并选择采信。
+
+API使用要求与文档，详情请见[RailGo API](https://api.railgo.dev)
