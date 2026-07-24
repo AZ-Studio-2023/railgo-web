@@ -26,6 +26,15 @@ onMounted(() => {
 
 [<img :src="msStoreImgSrc" width="200"/>](https://apps.microsoft.com/detail/9ntrz0dmckgz?mode=mini)
 
+### 百度网盘
+
+[传送门](https://pan.baidu.com/s/5nMrDWPQgidr6rbP9TPhjkg)
+
+### 蓝奏云
+
+[传送门](https://wwasv.lanzoum.com/b01eun4auj)
+密码:6xbf
+
 ## 开源
 
 Windows版本使用WinUI3开发，目前已经在Github开源，欢迎Star~
