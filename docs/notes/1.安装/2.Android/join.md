@@ -43,7 +43,7 @@ permalink: /android/join.html
 > 如需退级，请查看[自选版本](#自选版本)处的说明信息。
 
 ### 获取公测码
-由于V2版本API对服务器性能开销较大，且可能出现一些未知的错误，V2版本使用需要在[RailGo Center](https://center.zenglingkun.cn)获取公测码，积分不足可在活动中心领取积分补偿。
+由于V2 API对服务器性能开销较大，且可能出现一些未知的错误，2.0.0版本使用需要在[RailGo Center](https://center.zenglingkun.cn)获取公测码，积分不足可在活动中心领取积分补偿。
 
 更多有关公测码鉴权的信息，可查阅 [开箱即用体验 - 公测版鉴权](/use/oobe.html#公测版鉴权) 。
 
